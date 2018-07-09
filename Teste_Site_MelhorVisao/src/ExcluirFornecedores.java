@@ -15,13 +15,11 @@ public class ExcluirFornecedores {
 	
 	@Before
 	public void antes() {
-		System.setProperty("webdriver.gecko.driver",
-				"C:\\Users\\181620089.SENACINFO\\eclipse\\java-oxygen\\eclipse\\geckodriver.exe");
+		System.setProperty("webdriver.gecko.driver", "C:\\Users\\181620089.SENACINFO\\eclipse\\java-oxygen\\eclipse\\geckodriver.exe");
 
 		pagina = new FirefoxDriver();
 		pagina.get("http://10.10.139.20/cadastroFornecedor/fornecedores.php");	
 	}
-	
 	
 	@Test
 	public void test() {
@@ -39,23 +37,19 @@ public class ExcluirFornecedores {
 		
 		WebElement botao = pagina.findElementByXPath("/html/body/table/tbody/tr[2]/td[14]/a/button");
 		botao.click();
-		try {
-			   Thread.sleep(5000);
-			} catch (Exception e) {
-			   e.printStackTrace();
-			}
+		
 		List<WebElement> btnExcluir = pagina.findElementsByName("excluir");
 		int novoTotal = btnExcluir.size();
 		
 		String mensagem = "";
 		if (total != novoTotal) {
 			mensagem = "Teste ok";
-	    
 		}else {
-			mensagem = "Teste retornou ERRO";
-		
+			if(total == novoTotal) {
+				mensagem = "Teste retornou ERRO";
+			}
 		}
-			JOptionPane.showMessageDialog(null, mensagem);
+		JOptionPane.showMessageDialog(null, mensagem);
 		
 		
 		
