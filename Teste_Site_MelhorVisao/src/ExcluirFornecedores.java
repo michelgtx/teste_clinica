@@ -15,7 +15,7 @@ public class ExcluirFornecedores {
 	
 	@Before
 	public void antes() {
-		System.setProperty("webdriver.gecko.driver", "C:\\Users\\181620089.SENACINFO\\eclipse\\java-oxygen\\eclipse\\geckodriver.exe");
+		System.setProperty("webdriver.gecko.driver", "C:\\uc13\\geckodriver.exe");
 
 		pagina = new FirefoxDriver();
 		pagina.get("http://10.10.139.20/cadastroFornecedor/fornecedores.php");	
