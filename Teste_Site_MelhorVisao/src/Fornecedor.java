@@ -17,10 +17,10 @@ public class Fornecedor {
 	public void antes() {
 		
 		System.setProperty("webdriver.gecko.driver",
-				"C:\\Users\\781510023.SENACINFO\\eclipse\\java-oxygen\\eclipse\\geckodriver.exe");
+				"C:\\uc13\\geckodriver.exe");
 		
 		pagina = new FirefoxDriver();
-		pagina.get("http://localhost/cadastroFornecedor/frmFornecedor.php");
+		pagina.get("http://10.10.139.20/cadastroFornecedor/frmFornecedor.php");
 		
 	}
 			
